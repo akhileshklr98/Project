@@ -39,6 +39,7 @@ export class SalesComponent implements OnInit {
       if(data !=null){
         alert('Successfully Added Today Sale....')
         f.resetForm();
+        this.ngOnInit();
       }
     });
 
