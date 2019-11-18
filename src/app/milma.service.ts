@@ -23,4 +23,8 @@ export class MilmaService {
   buy(milma){
     return this.http.post("http://localhost:3000/addFarmerDetails",{farmer: milma});
   }
+
+  getSocities(){
+    return this.http.get("http://localhost:3000/socities");
+  }
 }

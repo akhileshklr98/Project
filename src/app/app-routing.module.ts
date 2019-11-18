@@ -7,6 +7,7 @@ import { AddsocityComponent } from './dairy/addsocity/addsocity.component';
 import { SalesComponent } from './socity/sales/sales.component';
 import { SponsorComponent } from './socity/sponsor/sponsor.component';
 import { from } from 'rxjs';
+import { ShowComponent } from './dairy/show/show.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'socity', component: SocityComponent},
   {path: 'dairy/add', component: AddsocityComponent},
   {path: 'socity/sale', component: SalesComponent},
-  {path: 'socity/sponsor', component: SponsorComponent}
+  {path: 'socity/sponsor', component: SponsorComponent},
+  {path: 'dairy/show', component: ShowComponent}
 ];
 
 @NgModule({

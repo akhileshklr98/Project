@@ -1,0 +1,29 @@
+<app-dairynavbar></app-dairynavbar>
+
+<body>
+    <div class="container">
+        <h3>Socities</h3>           
+        <table class="table table-bordered" *ngIf = 'socities && socities.length'>
+          <thead>
+            <tr>
+              <th>Socity Name</th>
+              <th>Place</th>
+              <th>Email</th>
+              <th>Contact Number</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let socitiy of socities'>
+              <td>{{ socitiy.socityName }}</td>
+              <td>{{ socitiy.place }}</td>
+              <td>{{ socitiy.email }}</td>
+              <td>{{ socitiy.phoneNumber }}</td>
+              <td>{{ socitiy.userName }}</td>
+             
+              <!-- <td><a href="" (click)="deleteProduct(product._id)">Delete</a></td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>

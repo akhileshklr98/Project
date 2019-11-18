@@ -14,6 +14,7 @@ import { AddsocityComponent } from './dairy/addsocity/addsocity.component';
 import { SocitynavbarComponent } from './socity/socitynavbar/socitynavbar.component';
 import { SalesComponent } from './socity/sales/sales.component';
 import { SponsorComponent } from './socity/sponsor/sponsor.component';
+import { ShowComponent } from './dairy/show/show.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SponsorComponent } from './socity/sponsor/sponsor.component';
     AddsocityComponent,
     SocitynavbarComponent,
     SalesComponent,
-    SponsorComponent
+    SponsorComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
