@@ -15,4 +15,12 @@ export class MilmaService {
   register(socity){
     return this.http.post("http://localhost:3000/addSocity",{socity: socity});
   }
+
+  addsale(sale){
+    return this.http.post("http://localhost:3000/addSale",{sale: sale});
+  }
+  
+  buy(milma){
+    return this.http.post("http://localhost:3000/addFarmerDetails",{farmer: milma});
+  }
 }

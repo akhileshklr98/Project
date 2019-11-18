@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dairynavbar',
-  templateUrl: './dairynavbar.component.html',
-  styleUrls: ['./dairynavbar.component.css']
+  selector: 'app-socitynavbar',
+  templateUrl: './socitynavbar.component.html',
+  styleUrls: ['./socitynavbar.component.css']
 })
-export class DairynavbarComponent implements OnInit {
+export class SocitynavbarComponent implements OnInit {
 
   username = localStorage.getItem('username');
 
@@ -21,6 +21,5 @@ export class DairynavbarComponent implements OnInit {
       this.router.navigate(['/']);
     }
   }
-  
 
 }

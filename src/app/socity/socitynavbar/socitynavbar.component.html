@@ -8,22 +8,24 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dairy">Home</a>
+          <a class="nav-link" routerLink="/socity">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dairy/add">Add Socity</a>
+          <a class="nav-link" routerLink="/socity/sale">Milma Sales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" routerLink="/dairy/report">Report</a>
+            <a class="nav-link" routerLink="/socity/sponsor">Milma Sponsor</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" routerLink="/socity/report">Report</a>
         </li>
       </ul>
       
       <ul class="navbar-nav mr-left">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dairy">{{username | uppercase}}</a>
+          <a class="nav-link" routerLink="/socity">{{username | uppercase}}</a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" routerLink="/logout">Logout</a> -->
           <a class="nav-link" (click)="navigate()" routerLink="logout">Logout</a>
         </li>
       </ul>

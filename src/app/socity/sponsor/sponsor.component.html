@@ -1,0 +1,47 @@
+<app-socitynavbar></app-socitynavbar>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-6 offset-sm-3">
+                <h3>Farmer Details</h3>
+                <form name="form" method="POST" (ngSubmit)="f.form.valid && addFarmerDetails(f)" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="Date">Date</label>
+                        <input type="date" class="form-control" name="Date" [(ngModel)]="farmer.Date" #Date="ngModel" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="farmerName">Farmer Name</label>
+                        <input type="text" class="form-control" name="farmerName" [(ngModel)]="farmer.farmerName" #farmerName="ngModel" placeholder="Enter Farmer Name" [ngClass]="{ 'is-invalid': f.submitted && farmerName.invalid }" required />
+                        <div *ngIf="f.submitted && todayPrice.invalid" class="invalid-feedback">
+                            <div *ngIf="farmerName.errors.required">Farmer Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="todayPrice">Totay Price</label>
+                        <input type="number" class="form-control" name="todayPrice" [(ngModel)]="farmer.todayPrice" (keyup)="onKey($event)" #todayPrice="ngModel" placeholder="Enter Price per Ltr" [ngClass]="{ 'is-invalid': f.submitted && todayPrice.invalid }" required />
+                        <div *ngIf="f.submitted && todayPrice.invalid" class="invalid-feedback">
+                            <div *ngIf="todayPrice.errors.required">Today Price is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalQty">Total Qty</label>
+                        <input type="number" class="form-control" name="totalQty" [(ngModel)]="farmer.totalQty" (keyup)="onKey($event)" #totalQty="ngModel" placeholder="Enter Total Qty in Ltr" [ngClass]="{ 'is-invalid': f.submitted && totalQty.invalid }" required />
+                        <div *ngIf="f.submitted && totalQty.invalid" class="invalid-feedback">
+                            <div *ngIf="totalQty.errors.required">Total Qty is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmount">Total Amount</label>
+                        <input type=" number" class="form-control" name="totalAmount" [(ngModel)]="farmer.totalAmount" #totalAmount="ngModel" readonly />
+                    </div>
+                    <input type="hidden" class="form-control" name="socityName" [(ngModel)]="farmer.socityName" #socityName="ngModel" />
+                    <div class="form-group">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>

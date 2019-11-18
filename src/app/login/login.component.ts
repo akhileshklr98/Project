@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     var userName = this.socity.userName;
     var passWord = this.socity.passWord;
     var users = {"name":userName,"pass":passWord}
+    console.log(users);
     this.milmaService.login(users)
     .subscribe( data=>{
       this.socity = JSON.parse(JSON.stringify(data));
@@ -34,10 +35,12 @@ export class LoginComponent implements OnInit {
       }else{
         localStorage.setItem('username',this.socity.userName);
         console.log("Login Successfully");
+        console.log(this.socity);
         if(this.socity.isAdmin == 1){
           console.log('Admin');
           this.router.navigate(["dairy"]);
         }else{
+          localStorage.setItem('socityname',this.socity.socityName);
           console.log('user');
           this.router.navigate(['socity']);
         }

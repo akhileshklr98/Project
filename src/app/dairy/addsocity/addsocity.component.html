@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col col-sm-6 offset-sm-3">
                 <h3>Add Socity</h3>
-                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" mustmatch="['password','confirmPassword']" #f="ngForm" novalidate>
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" mustmatch="['password','confirmPassword']" #f="ngForm" novalidate>
                     <div class="form-group">
                         <label for="socityName">Socity Name</label>
                         <input type="text" class="form-control" name="socityName" [(ngModel)]="model.socityName" #socityName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && socityName.invalid }" required />
