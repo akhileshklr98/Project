@@ -9,6 +9,7 @@ export class MilmaService {
   constructor(public http: HttpClient) { }
 
   login(user){
+    console.log('service login')
     return this.http.post("http://localhost:3000/login",{user});
   }
 
@@ -26,5 +27,9 @@ export class MilmaService {
 
   getSocities(){
     return this.http.get("http://localhost:3000/socities");
+  }
+
+  getReport(){
+    return this.http.get("http://localhost:3000/report");
   }
 }

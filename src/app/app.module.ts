@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './dairy/home/home.component';
@@ -33,7 +34,8 @@ import { ShowComponent } from './dairy/show/show.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

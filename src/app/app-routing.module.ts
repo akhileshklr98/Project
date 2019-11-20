@@ -12,12 +12,12 @@ import { ShowComponent } from './dairy/show/show.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'dairy', component: HomeComponent},
+  {path: 'dairy', component: ShowComponent},
   {path: 'socity', component: SocityComponent},
   {path: 'dairy/add', component: AddsocityComponent},
   {path: 'socity/sale', component: SalesComponent},
-  {path: 'socity/sponsor', component: SponsorComponent},
-  {path: 'dairy/show', component: ShowComponent}
+  {path: 'socity/sponsor', component: SponsorComponent}
+  // {path: 'dairy/show', component: ShowComponent}
 ];
 
 @NgModule({
